@@ -1,6 +1,4 @@
-var app = angular.module('App', ['ui.router', 'AppCtrl']);
-
-app.config([
+angular.module('App', ['ui.router', 'ui.materialize']).config([
     '$stateProvider',
     '$urlRouterProvider',
     '$locationProvider',
