@@ -8,6 +8,7 @@ var app = express();
 
 // MONGOOSE MODELS & CONNECTION
 var mongoose = require('mongoose');
+var Tracks = require('./models/tracks');
 
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/Project3');
 
@@ -23,6 +24,7 @@ app.get("/*", function(req, res) {
 });
 
 //CONTROLLERS
+app.use('/api/tracks', require('./controllers/tracks'));
 
 //LISTENERS 
 var server = app.listen(process.env.PORT || 3000);
