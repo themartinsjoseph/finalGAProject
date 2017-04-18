@@ -23,6 +23,7 @@
     "express": "^4.15.2",
     "express-ejs-layouts": "^2.3.0",
     "express-jwt": "^5.1.0",
+    "https": "^1.0.0",
     "jsonwebtoken": "^7.3.0",
     "mongoose": "^4.9.2",
     "morgan": "^1.8.1",

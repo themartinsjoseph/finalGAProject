@@ -1,4 +1,6 @@
-angular.module('App', ['ui.router', 'ui.materialize']).config([
+var app = angular.module('App', ['ui.router', 'ui.materialize', 'AppCtrl']);
+
+app.config([
     '$stateProvider',
     '$urlRouterProvider',
     '$locationProvider',
@@ -13,12 +15,13 @@ angular.module('App', ['ui.router', 'ui.materialize']).config([
         controller: 'HomeCtrl'
     })
     .state('showTrack', {
-        url: '/tracks/:id',
+        url: '/track/:id',
         templateUrl: 'app/views/trackShow.html',
-        controller: 'TrackShowCtrl'
+        controller: 'ShowTrackCtrl'
+  
     })
     .state('newTrack', {
-        url: '/newTrack',
+        url: '/track',
         templateUrl: 'app/views/newTrack.html',
         controller: 'NewTrackCtrl'
     })
@@ -26,7 +29,5 @@ angular.module('App', ['ui.router', 'ui.materialize']).config([
         url: '/404',
         templateUrl: 'app/views/404.html'
     });
-
     $locationProvider.html5Mode(true);
-
 }]);

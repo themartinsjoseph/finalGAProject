@@ -1,34 +1,36 @@
+//Routes & Vars
 var express = require('express');
-var Tracks = require('../models/tracks');
+var tracks = require('../models/track');
 var router = express.Router();
 
+//Routes
 router.route('/')
+  //shows track
   .get(function(req, res){
-    Excuses.find(function(err, excuses){
+    tracks.find(function(err, tracks){
       if (err) return res.status(500).send(err);
-      return res.send(excuses);
+      return res.send(tracks);
     });
   })
+  //create a new track
   .post(function(req, res){
-    Excuses.create(req.body, function(err, excuse){
-    if (err) return res.status(500).send(err);
-    return res.send(excuse);
+    console.log('this post route is being reached');
+    tracks.create(req.body, function(err, tracks){
+      if (err) return res.status(500).send(err);
+      return res.send(tracks);
     });
   });
 
 router.route('/:id')
-  .get(function(req, res){
-    Excuses.findById(req.params.id, function(err, excuse){
-      if (err)return res.status(500).send(err);
-      return res.send(excuse);
-    })
-  })
+   //display a specific track
+   .get(function(req, res){
+      console.log('the id page is working');
+      tracks.findById(req.params.id, function(err, tracks){
+        if (err)return res.status(500).send(err);
+        console.log('oh hello there!')
+        return res.send(tracks);
+      });
+    });
 
-router.put('/:id', function(req, res){
-  Excuses.findByIdAndUpdate(req.params.id, req.body, function(err){
-    if (err) return res.status(500).send(err);
-    return res.send({message: 'success'});
-  });
-})
-
+//Listener
 module.exports = router;
