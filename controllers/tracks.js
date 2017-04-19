@@ -1,6 +1,7 @@
 //Routes & Vars
 var express = require('express');
 var tracks = require('../models/track');
+var WaveformPlaylist = require('waveform-playlist');
 var router = express.Router();
 
 //Routes

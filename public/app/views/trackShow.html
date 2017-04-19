@@ -2,84 +2,88 @@
 	<h1>Hello, {{ tracks.projectName }}</h1>
 	<div class="row">
 		<div class="col s12">
-			<h1 class="post-title">You're Recording {{ tracks.trackName }}</h1>
+			<h1 class="post-title">You're Recording <strong>{{ tracks.trackName }}</strong></h1>
        		 <p class="lead">You can record a track on top of the previously recorded track! Drop some tracks into the container below if you'd like to try recording over them.</p>
 		</div>
 	</div>
-		<div id="top-bar" class="playlist-top-bar">
-			<div class="playlist-toolbar">
-				<div class="btn-group">
-					<span class="btn-play waves-effect waves-light btn">
-						<i class="fa fa-play"></i>
-					</span>
-					<span class="btn-stop waves-effect waves-light btn">
-						<i class="fa fa-stop"></i>
-					</span>
-					<span class="btn-record waves-effect waves-light btn disabled">
-						<i class="fa fa-microphone"></i>
-					</span>
-				</div>
-				<div class="btn-group btn-playlist-state-group">
-					<span class="btn-cursor waves-effect waves-light btn active" title="select cursor">
-						<i class="fa fa-headphones"></i>
-					</span>
-					<span class="btn-select waves-effect waves-light btn" title="select audio region">
-						<i class="fa fa-italic"></i>
-					</span>
-					<span class="btn-shift waves-effect waves-light btn" title="shift audio in time">
-						<i class="fa fa-arrows-h"></i>
-					</span>
-					<span class="btn-fadein waves-effect waves-light btn" title="set audio fade in">
-						<i class="fa fa-long-arrow-left"></i>
-					</span>
-					<span class="btn-fadeout waves-effect waves-light btn" title="set audio fade out">
-						<i class="fa fa-long-arrow-right"></i>
-					</span>
-				</div>
-				<div class="btn-group btn-select-state-group hidden">
-					<span title="keep only the selected audio region for a track" class="btn-trim-audio waves-effect waves-light btn disabled">Trim Audio</span>
-				</div>
-				<div class="btn-group">
-					<span title="Download the current work as Wav file" class="btn btn-download waves-effect waves-light btn">
-						<i class="fa fa-download"></i>
-					</span>
+	<div class="row">
+		<div class="col s12">
+			<h1 class="post-title">Record An Audio Track</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col s12">
+			<div id="top-bar" class="playlist-top-bar">
+				<div class="playlist-toolbar">
+					<div class="btn-group">
+						<span class="btn-play btn btn-success">
+							<i class="fa fa-play"></i>
+						</span>
+						<span class="btn-stop btn btn-danger">
+							<i class="fa fa-stop"></i>
+						</span>
+						<span class="btn-record btn btn-danger disabled">
+							<i class="fa fa-microphone"></i>
+						</span>
+						<span class="btn-cursor btn btn-default active" title="select cursor">
+							<i class="fa fa-headphones"></i>
+						</span>
+						<span class="btn-select btn btn-default" title="select audio region">
+							<i class="fa fa-italic"></i>
+						</span>
+						<span class="btn-shift btn btn-default" title="shift audio in time">
+							<i class="fa fa-arrows-h"></i>
+						</span>
+						<span class="btn-fadein btn btn-default" title="set audio fade in">
+							<i class="fa fa-long-arrow-left"></i>
+						</span>
+						<span class="btn-fadeout btn btn-default" title="set audio fade out">
+							<i class="fa fa-long-arrow-right"></i>
+						</span>
+					</div>
+					<div class="btn-group">
+						<span title="keep only the selected audio region for a track" class="btn-trim-audio btn btn-primary disabled btn-select-state-group hidden">
+						Trim Audio
+						</span>
+						<span title="Download the current work as Wav file" class="btn btn-download btn-primary">
+							<i class="fa fa-download"></i>
+						</span>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div id="playlist"></div>
-			<div class="playlist-bottom-bar">
-				<form class="form-inline">
-					<select class="time-format form-control">
-						<option value="seconds">seconds</option>
-						<option value="thousandths">thousandths</option>
-						<option value="hh:mm:ss">hh:mm:ss</option>
-						<option value="hh:mm:ss.u">hh:mm:ss + tenths</option>
-						<option value="hh:mm:ss.uu">hh:mm:ss + hundredths</option>
-						<option value="hh:mm:ss.uuu" selected="selected">hh:mm:ss + milliseconds</option>
-					</select>
-					<input type="text" class="audio-start input-small form-control">
-					<input type="text" class="audio-end form-control">
-					<label class="audio-pos">00:00:00.0</label>
-				</form>
-				<div class="track-drop"></div>
-				<div class="loading-data"></div>
-			</div>
-			</div>
-		</div>
+	</div>	
+	<div id="playlist"></div>
+	<div class="playlist-bottom-bar">
+		<form class="form-inline">
+			<select class="time-format form-control">
+				<option value="seconds">seconds</option>
+				<option value="thousandths">thousandths</option>
+				<option value="hh:mm:ss">hh:mm:ss</option>
+				<option value="hh:mm:ss.u">hh:mm:ss + tenths</option>
+				<option value="hh:mm:ss.uu">hh:mm:ss + hundredths</option>
+				<option value="hh:mm:ss.uuu" selected="selected">hh:mm:ss + milliseconds</option>
+			</select>
+			<input type="text" class="audio-start input-small form-control">
+			<input type="text" class="audio-end form-control">
+			<label class="audio-pos">00:00:00.0</label>
+		</form>
+
+	  <div class="track-drop"></div>
+	  <div class="loading-data"></div>
+	</div>
+
+	<footer class="well well-lg">
+	  <p>Waveform Playlist originally written for <a href="https://www.sourcefabric.org/en/airtime">Airtime</a> at <a href="https://www.sourcefabric.org">Sourcefabric</a>
+	  
+	  <p class="copyright">waveform-playlist maintained by <a href="https://github.com/naomiaro">naomiaro</a></p>
+	  <p>Licensed under the MIT License</p>
+	</footer>
 </div>
 
-
-<script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
 <script type="text/javascript" src="js/waveform-playlist.var.js"></script>
 <script type="text/javascript" src="js/record.js"></script>
 <script type="text/javascript" src="js/emitter.js"></script>
 
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-62186746-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+
