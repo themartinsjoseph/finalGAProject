@@ -7,12 +7,8 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col s12">
-			<h1 class="post-title">Record An Audio Track</h1>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col s12">
+		<div class="col s6 card">
+			<h4 class="post-title">Record An Audio Track</h4>
 			<div id="top-bar" class="playlist-top-bar">
 				<div class="playlist-toolbar">
 					<div class="btn-group">
@@ -28,6 +24,8 @@
 						<span class="btn-cursor btn btn-default active" title="select cursor">
 							<i class="fa fa-headphones"></i>
 						</span>
+					</div>
+					<div class="btn-group">	
 						<span class="btn-select btn btn-default" title="select audio region">
 							<i class="fa fa-italic"></i>
 						</span>
@@ -49,6 +47,21 @@
 							<i class="fa fa-download"></i>
 						</span>
 					</div>
+				</div>
+			</div>		
+		</div>
+		<div class="row">
+			<div class="col s6 card">
+				<h4>Chat</h4>
+				    <form action="">
+				      <input id="m" autocomplete="off" /><button>Send</button>
+				    </form>
+				    <ul id="messages"></ul>
+			</div>    
+		</div>
+	</div>
+	
+						
 				</div>
 			</div>
 		</div>
@@ -73,14 +86,15 @@
 	  <div class="loading-data"></div>
 	</div>
 
-	<footer class="well well-lg">
+
+<!-- 	<footer class="well well-lg">
 	  <p>Waveform Playlist originally written for <a href="https://www.sourcefabric.org/en/airtime">Airtime</a> at <a href="https://www.sourcefabric.org">Sourcefabric</a>
 	  
 	  <p class="copyright">waveform-playlist maintained by <a href="https://github.com/naomiaro">naomiaro</a></p>
 	  <p>Licensed under the MIT License</p>
-	</footer>
-</div>
+	</footer>-->
 
+<script type="text/javascript" src="js/sockets.js"></script>
 <script type="text/javascript" src="js/waveform-playlist.var.js"></script>
 <script type="text/javascript" src="js/record.js"></script>
 <script type="text/javascript" src="js/emitter.js"></script>

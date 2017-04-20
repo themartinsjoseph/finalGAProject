@@ -16,7 +16,7 @@
     <!-- FontAwesome CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- APP CSS -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
     <link rel="canonical" href="https://naomiaro.github.io/waveform-playlist/record.html">
     <link rel="alternate" type="application/rss+xml" title="Waveform Playlist" href="https://naomiaro.github.io/waveform-playlist/feed.xml">
     <!-- JQuery for Materialize JS -->
@@ -36,11 +36,16 @@
     <script src="app/controllers.js"></script>
     <script src="app/services.js"></script>
 
+    <!-- sockets and includes -->
+    <script src="/socket.io/socket.io.js"></script>
+
 </head>
 <body>
+
+
         <div ng-include="'app/views/partials/navBar.html'"></div> 
         <div ui-view></div> 
-	</div>
+
 
 </body>
 </html>

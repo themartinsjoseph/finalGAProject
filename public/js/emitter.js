@@ -2,6 +2,7 @@
  * This script is provided to give an example how the playlist can be controlled using the event emitter.
  * This enables projects to create/control the useability of the project.
 */
+
 var ee = playlist.getEventEmitter();
 var $container = $("body");
 var $timeFormat = $container.find('.time-format');
@@ -16,6 +17,7 @@ var audioPos = 0;
 var downloadUrl = undefined;
 var isLooping = false;
 var playoutPromises;
+
 
 function toggleActive(node) {
   var active = node.parentNode.querySelectorAll('.active');
@@ -270,10 +272,12 @@ $container.on("change", ".time-format", function(e) {
 
 $container.on("input change", ".master-gain", function(e){
   ee.emit("mastervolumechange", e.target.value);
+
 });
 
 $container.on("change", ".continuous-play", function(e){
   ee.emit("continuousplay", $(e.target).is(':checked'));
+
 });
 
 $container.on("change", ".link-endpoints", function(e){
@@ -284,14 +288,14 @@ $container.on("change", ".automatic-scroll", function(e){
   ee.emit("automaticscroll", $(e.target).is(':checked'));
 });
 
-function displaySoundStatus(status) {
+socket.on(function displaySoundStatus(status) {
   $(".sound-status").html(status);
-}
+})
 
-function displayLoadingData(data) {
+socket.on(function displayLoadingData(data) {
   var info = $("<div/>").append(data);
   $(".loading-data").append(info);
-}
+});
 
 function displayDownloadLink(link) {
   var dateString = (new Date()).toISOString();

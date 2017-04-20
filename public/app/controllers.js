@@ -16,6 +16,7 @@ angular.module('AppCtrl', ['AppServices'])
 }])
 .controller('ShowTrackCtrl', ['$scope', '$location', '$http', '$stateParams', 'TracksAPI', function($scope, $location, $http, $stateParams, TracksAPI) {
 	$scope.tracks = {};
+	console.dir(playlist);
 
 	TracksAPI.getTrack($stateParams.id).then(function success(res){
 		$scope.tracks = res.data; 
