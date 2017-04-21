@@ -7,92 +7,87 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col s6 card">
+		<div class="col m6">
 			<h4 class="post-title">Record An Audio Track</h4>
 			<div id="top-bar" class="playlist-top-bar">
 				<div class="playlist-toolbar">
 					<div class="btn-group">
-						<span class="btn-play btn btn-success">
+						<span class="btn-play btn pink darken-1">
 							<i class="fa fa-play"></i>
 						</span>
-						<span class="btn-stop btn btn-danger">
+						<span class="btn-stop btn pink darken-1">
 							<i class="fa fa-stop"></i>
 						</span>
-						<span class="btn-record btn btn-danger disabled">
+						<span class="btn-record btn pink darken-1 disabled">
 							<i class="fa fa-microphone"></i>
 						</span>
-						<span class="btn-cursor btn btn-default active" title="select cursor">
+						<span class="btn-cursor btn pink darken-1 active" title="select cursor">
 							<i class="fa fa-headphones"></i>
 						</span>
 					</div>
 					<div class="btn-group">	
-						<span class="btn-select btn btn-default" title="select audio region">
+						<span class="btn-select btn btn-small" title="select audio region">
 							<i class="fa fa-italic"></i>
 						</span>
-						<span class="btn-shift btn btn-default" title="shift audio in time">
+						<span class="btn-shift btn btn-small" title="shift audio in time">
 							<i class="fa fa-arrows-h"></i>
 						</span>
-						<span class="btn-fadein btn btn-default" title="set audio fade in">
+						<span class="btn-fadein btn btn-small" title="set audio fade in">
 							<i class="fa fa-long-arrow-left"></i>
 						</span>
-						<span class="btn-fadeout btn btn-default" title="set audio fade out">
+						<span class="btn-fadeout btn btn-small" title="set audio fade out">
 							<i class="fa fa-long-arrow-right"></i>
 						</span>
 					</div>
 					<div class="btn-group">
-						<span title="keep only the selected audio region for a track" class="btn-trim-audio btn btn-primary disabled btn-select-state-group hidden">
+						<!-- <span title="keep only the selected audio region for a track" class="btn-trim-audio btn btn-primary disabled btn-select-state-group hidden">
 						Trim Audio
-						</span>
-						<span title="Download the current work as Wav file" class="btn btn-download btn-primary">
+						</span> -->
+						<span title="Download the current work as Wav file" class="btn btn-download pink darken-1 btn-small">
 							<i class="fa fa-download"></i>
 						</span>
 					</div>
 				</div>
 			</div>		
 		</div>
-		<div class="row">
-			<div class="col s6 card">
-				<h4>Chat</h4>
-				    <form action="">
-				      <input id="m" autocomplete="off" /><button>Send</button>
-				    </form>
-				    <ul id="messages"></ul>
-			</div>    
-		</div>
+	<div class="row">
+		<div class="col m6">
+			<h4>Chat</h4>
+				<ul id="messages"></ul>
+				<form action="">
+					<input id="m" autocomplete="off" /><button>Send</button>
+				</form>
+		</div>    
 	</div>
-	
-						
-				</div>
-			</div>
-		</div>
-	</div>	
+</div>
+
 	<div id="playlist"></div>
 	<div class="playlist-bottom-bar">
-		<form class="form-inline">
+		<!-- <form class="form-inline">
 			<select class="time-format form-control">
-				<option value="seconds">seconds</option>
-				<option value="thousandths">thousandths</option>
-				<option value="hh:mm:ss">hh:mm:ss</option>
-				<option value="hh:mm:ss.u">hh:mm:ss + tenths</option>
-				<option value="hh:mm:ss.uu">hh:mm:ss + hundredths</option>
-				<option value="hh:mm:ss.uuu" selected="selected">hh:mm:ss + milliseconds</option>
-			</select>
+					<option value="seconds">seconds</option>
+					<option value="thousandths">thousandths</option>
+					<option value="hh:mm:ss">hh:mm:ss</option>
+					<option value="hh:mm:ss.u">hh:mm:ss + tenths</option>
+					<option value="hh:mm:ss.uu">hh:mm:ss + hundredths</option>
+					<option value="hh:mm:ss.uuu" selected="selected">hh:mm:ss + milliseconds</option>
+				</select>
 			<input type="text" class="audio-start input-small form-control">
 			<input type="text" class="audio-end form-control">
 			<label class="audio-pos">00:00:00.0</label>
-		</form>
+		</form> -->
 
 	  <div class="track-drop"></div>
 	  <div class="loading-data"></div>
 	</div>
 
 
-<!-- 	<footer class="well well-lg">
+ 	<footer class="well well-lg">
 	  <p>Waveform Playlist originally written for <a href="https://www.sourcefabric.org/en/airtime">Airtime</a> at <a href="https://www.sourcefabric.org">Sourcefabric</a>
 	  
 	  <p class="copyright">waveform-playlist maintained by <a href="https://github.com/naomiaro">naomiaro</a></p>
 	  <p>Licensed under the MIT License</p>
-	</footer>-->
+	</footer>
 
 <script type="text/javascript" src="js/sockets.js"></script>
 <script type="text/javascript" src="js/waveform-playlist.var.js"></script>
