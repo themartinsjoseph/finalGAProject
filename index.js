@@ -42,7 +42,7 @@ io.on('connection', function(socket){
 });
 
 server.listen(process.env.PORT || 3000, function() {
-  console.log("Cory in the House!!!");
+	console.log('connected to server');
 });
 module.exports = app;
 
