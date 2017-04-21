@@ -28,7 +28,8 @@
     "mongoose": "^4.9.2",
     "morgan": "^1.8.1",
     "sanitize-html": "^1.14.1",
-    "socket.io": "^1.7.3"
+    "socket.io": "^1.7.3",
+    "waveform-playlist": "^2.10.1"
   },
   "bugs": {
     "url": "https://github.com/themartinsjoseph/finalGAProject/issues"
